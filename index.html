@@ -7,9 +7,9 @@
 <meta name="description" content="Papais Noéis, renas, árvores e casinhas de Natal impressos em 3D. Edição especial LarHome.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Cormorant+Garamond:wght@400;500&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--red:#C42B33;--green:#D3132F;--green2:#9C0B22;--gold:#E2B64A;--white:#FFFFFF;--ink:#1D2321;
+:root{--red:#C42B33;--green:#0E3B2C;--green2:#092A20;--gold:#E2B64A;--white:#FFFFFF;--ink:#1D2321;
 --head:"Bricolage Grotesque",system-ui,sans-serif;--body:"Figtree",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
@@ -19,7 +19,7 @@ img{display:block;max-width:100%}a{color:inherit}
 .wrap{max-width:70rem;margin:0 auto;padding:0 1.1rem}
 h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
 #snow{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
-.igi{width:1.3em;height:1.3em;flex:none}
+.igi{width:1.5em;height:1.5em;flex:none}
 
 /* topo */
 .garland{display:flex;overflow:hidden;height:3.9rem;margin-bottom:-.4rem}
@@ -27,15 +27,10 @@ h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
 @media(min-width:40rem){.garland svg{width:6rem}.garland{height:5.2rem}}
 .garland .b{transform-origin:50px 19px;animation:sw 4s ease-in-out infinite alternate}
 @keyframes sw{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0}
-.logo{font:800 1.6rem var(--head);text-decoration:none}.logo b{color:var(--gold)}
-.nav a.ig{display:flex;gap:.5rem;align-items:center;text-decoration:none;font-weight:600;padding:.4rem .8rem;border:1.5px solid var(--gold);border-radius:2rem;color:var(--gold)}
-.nav a.ig span{display:none}@media(min-width:40rem){.nav a.ig span{display:inline}}
 
 .hero{position:relative;text-align:center;padding:2.2rem 0 3rem}
-.eyebrow{color:var(--gold);font:600 .95rem var(--body);letter-spacing:.18em;text-transform:uppercase}
-.hero h1{font-size:clamp(2.6rem,10vw,5.4rem);font-weight:800;margin:.6rem auto 1rem;max-width:14ch}
-.hero h1 em{font-style:normal;color:var(--gold)}
+.hero h1{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:.9rem;margin:.4rem auto .5rem;color:#A07A5C;font:500 clamp(3.6rem,14vw,6.8rem)/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.1em;text-transform:lowercase}
+.sub{margin-bottom:1.5rem;color:var(--gold);font:500 clamp(1.3rem,4.8vw,2rem)/1.1 "Cormorant Garamond",Georgia,serif;letter-spacing:.32em;text-transform:lowercase}
 .hero p{max-width:32rem;margin:0 auto 1.8rem;opacity:.88;font-size:1.15rem}
 .btns{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
 .btn{display:inline-flex;gap:.55rem;align-items:center;padding:.95rem 1.5rem;border-radius:.7rem;text-decoration:none;font:700 1.05rem var(--head);transition:transform .2s,box-shadow .2s}
@@ -43,6 +38,16 @@ h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
 .xmas{position:relative;overflow:hidden;color:#2b1d00;background:linear-gradient(135deg,#F3D67A,var(--gold) 55%,#C99A2E);box-shadow:0 6px 22px rgba(226,182,74,.35)}
 .xmas::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:sh 3.8s ease-in-out infinite}
 @keyframes sh{0%,55%{left:-60%}100%{left:130%}}
+
+.mini{width:1.9em;height:1.9em;flex:none;overflow:visible}
+.santa .hat{transform-origin:16px 14px}.deer .ant{transform-origin:16px 12px}
+.btn:hover .santa{animation:hop .55s ease-in-out}.btn:hover .hat{animation:wob .45s ease-in-out infinite alternate}
+.btn:hover .deer .ant{animation:wob .4s ease-in-out infinite alternate}
+.deer .nose{animation:gl 1.8s ease-in-out infinite}.btn:hover .deer .nose{animation-duration:.5s}
+.mini.go{animation:hop .6s ease-in-out}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-.45em) rotate(-8deg)}70%{transform:translateY(0) rotate(6deg)}}
+@keyframes wob{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
+@keyframes gl{0%,100%{filter:none}50%{filter:drop-shadow(0 0 3px #ff6b6b) brightness(1.3)}}
 .ghost{border:1.5px solid rgba(255,255,255,.55)}
 .ghost:hover{background:rgba(255,255,255,.1)}
 .orn{position:absolute;color:var(--gold);opacity:.8;animation:fl 5s ease-in-out infinite;user-select:none}
@@ -51,7 +56,7 @@ h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
 .o3{left:12%;bottom:12%;font-size:1.1rem;animation-delay:2.4s;color:#fff}.o4{right:10%;bottom:16%;font-size:1.8rem;animation-delay:.6s}
 
 /* abas */
-.tabs{position:sticky;top:0;z-index:40;background:rgba(156,11,34,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(226,182,74,.35)}
+.tabs{position:sticky;top:0;z-index:40;background:rgba(9,42,32,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(226,182,74,.35)}
 .tabs .wrap{display:flex;gap:.3rem;overflow-x:auto;scrollbar-width:none}
 .tabs a{white-space:nowrap;text-decoration:none;font-weight:600;padding:.95rem 1rem;opacity:.7;border-bottom:3px solid transparent;transition:.2s}
 .tabs a.on{opacity:1;color:var(--gold);border-color:var(--gold)}
@@ -100,25 +105,22 @@ footer a{display:inline-flex;gap:.4rem;align-items:center;margin-top:.5rem;color
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".25" stop-color="#FA7E1E"/><stop offset=".5" stop-color="#D62976"/><stop offset=".75" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs></svg>
 <canvas id="snow" aria-hidden="true"></canvas>
 
 <header>
   <div class="garland" id="garland" aria-hidden="true"></div>
-  <div class="wrap nav">
-    <a class="logo" href="#">Lar<b>Home</b></a>
-    <a class="ig" data-ig aria-label="Instagram da LarHome" target="_blank" rel="noopener"><svg class="igi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
-  </div>
 </header>
 
 <div class="hero">
-  <span class="orn o1">✦</span><span class="orn o2">❄</span><span class="orn o3">❄</span><span class="orn o4">✦</span>
+  <span class="orn o1">✦</span><span class="orn o2">❄</span><span class="orn o3">❄</span>
   <div class="wrap">
-    <div class="eyebrow">Edição especial</div>
-    <h1>Natal <em>LarHome</em></h1>
+    <h1>LarHome</h1>
+    <div class="sub">Especial de Natal</div>
     <p>Papais Noéis, renas, árvores e casinhas feitos em impressão 3D para deixar a sua casa com cara de festa.</p>
     <div class="btns">
-      <a class="btn xmas" href="#destaques">Ver coleção de Natal ✦</a>
-      <a class="btn ghost" data-ig target="_blank" rel="noopener"><svg class="igi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Conheça nosso Instagram</a>
+      <a class="btn xmas" href="#destaques">Ver coleção de Natal<svg class="mini santa" viewBox="0 0 32 32" aria-hidden="true"><g class="hat"><path d="M7 15Q9 4 20 4Q23 4 25 8Q22 7 20 8Q22 12 25 15Z" fill="#D93A3A"/><circle cx="26" cy="8" r="3" fill="#fff"/></g><rect x="5" y="13" width="22" height="5" rx="2.5" fill="#fff"/><circle cx="16" cy="20" r="6" fill="#F2C9A5"/><path d="M8 19Q8 30 16 30Q24 30 24 19Q20 23 16 23Q12 23 8 19Z" fill="#fff"/><circle cx="13.5" cy="19.5" r="1" fill="#222"/><circle cx="18.5" cy="19.5" r="1" fill="#222"/><circle cx="16" cy="21.5" r="1.2" fill="#E8A98A"/></svg></a>
+      <a class="btn ghost" data-ig target="_blank" rel="noopener"><svg class="igi" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="5" y="5" width="14" height="14" rx="4.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.4" cy="7.6" r="1.1" fill="#fff"/></svg>Conheça nosso Instagram<svg class="mini deer" viewBox="0 0 32 32" aria-hidden="true"><g class="ant" fill="none" stroke="#6B4226" stroke-width="2.2" stroke-linecap="round"><path d="M11 12L9 5M9 8L5 6M9 8L10 4M21 12L23 5M23 8L27 6M23 8L22 4"/></g><ellipse cx="7" cy="15" rx="3" ry="2" fill="#B07A4A" transform="rotate(-25 7 15)"/><ellipse cx="25" cy="15" rx="3" ry="2" fill="#B07A4A" transform="rotate(25 25 15)"/><circle cx="16" cy="19" r="8" fill="#B07A4A"/><ellipse cx="16" cy="23" rx="4.6" ry="3.5" fill="#D9A777"/><circle cx="12.5" cy="18" r="1.2" fill="#222"/><circle cx="19.5" cy="18" r="1.2" fill="#222"/><circle class="nose" cx="16" cy="23.3" r="2.4" fill="#E5242E"/></svg></a>
     </div>
   </div>
 </div>
@@ -143,7 +145,7 @@ footer a{display:inline-flex;gap:.4rem;align-items:center;margin-top:.5rem;color
 </main>
 
 <footer><div class="wrap">LarHome · Impressão 3D · Boas festas!<br>
-  <a data-ig target="_blank" rel="noopener"><svg class="igi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@larhomeloja</a>
+  <a data-ig target="_blank" rel="noopener"><svg class="igi" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="5" y="5" width="14" height="14" rx="4.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.4" cy="7.6" r="1.1" fill="#fff"/></svg>@larhomeloja</a>
 </div></footer>
 
 <script>
@@ -155,12 +157,12 @@ const CONFIG = {
 };
 // Preços de exemplo: troque pelos seus
 const DESTAQUES = [
-  {img:"santa",  nome:"Papai Noel de Tricô", desc:"Textura de tricô em vermelho, branco e preto. Senta em qualquer prateleira.", preco:"R$ 34,90", tag:"Mais pedido"},
-  {img:"rena",   nome:"Rena de Tricô", desc:"Rena fofa com nariz vermelho e chifres marrons.", preco:"R$ 34,90"},
-  {img:"arvore", nome:"Árvore de Natal Metalizada", desc:"Árvore em camadas com acabamento brilhante e estrela no topo.", preco:"R$ 29,90"},
-  {img:"gengi",  nome:"Biscoito de Gengibre", desc:"Boneco de gengibre em tricô com botões vermelhos.", preco:"R$ 34,90"},
-  {img:"casa",   nome:"Casinha com Luz", desc:"Casinha branca com janelinhas que brilham com luz de LED.", preco:"R$ 39,90"},
-  {img:"letreiro",nome:"Letreiro Feliz Natal", desc:"Letreiro vermelho com floco de neve para decorar a mesa.", preco:"R$ 44,90"}
+  {img:"santa",  nome:"Papai Noel de Tricô", desc:"Textura de tricô em vermelho, branco e preto. Senta em qualquer prateleira.", preco:"R$ 15,00", tag:"Mais pedido"},
+  {img:"rena",   nome:"Rena de Tricô", desc:"Rena fofa com nariz vermelho e chifres marrons.", preco:"R$ 15,00"},
+  {img:"arvore", nome:"Árvore de Natal Metalizada", desc:"Árvore em camadas com acabamento brilhante e estrela no topo.", preco:"R$ 15,00"},
+  {img:"gengi",  nome:"Biscoito de Gengibre", desc:"Boneco de gengibre em tricô com botões vermelhos.", preco:"R$ 15,00"},
+  {img:"casa",   nome:"Casinha com Luz", desc:"Casinha branca com janelinhas que brilham com luz de LED.", preco:"R$ 15,00"},
+  {img:"letreiro",nome:"Letreiro Feliz Natal", desc:"Letreiro vermelho com floco de neve para decorar a mesa.", preco:"R$ 15,00"}
 ];
 const KITS = [
   {img:"kit",    nome:"Kit Natal na Bandeja", desc:"Papai Noel, árvore e rena sobre bandeja oval branca.", preco:"a partir de R$ 119,90"},
@@ -181,6 +183,7 @@ document.getElementById("list").innerHTML = KITS.map(p => `
   <a class="row" href="${wa(p.nome)}" target="_blank" rel="noopener"><div><h3>${p.nome}</h3><p>${p.desc}</p><div class="pr">${p.preco}</div></div>
   <img src="${IMG[p.img]}" alt="${p.nome}" loading="lazy"></a>`).join("");
 
+document.querySelectorAll(".btn").forEach(b => b.addEventListener("click", () => { const m = b.querySelector(".mini"); if (m) { m.classList.remove("go"); void m.getBoundingClientRect(); m.classList.add("go"); setTimeout(() => m.classList.remove("go"), 700); } }));
 /* guirlanda com bolas natalinas */
 const G = document.getElementById("garland"), bc = ["#D93A3A","#E2B64A","#F4F4F0"];
 const nU = Math.ceil(Math.max(innerWidth, screen.width) / 72) + 1;
